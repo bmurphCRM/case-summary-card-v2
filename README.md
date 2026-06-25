@@ -7,6 +7,9 @@ A modern, themable Lightning Web Component (LWC) that surfaces an at-a-glance su
 3. **Notes** — count of `ContentNote` records linked via `ContentDocumentLink`.
 4. **Files** — count of non-Note `ContentDocument` files linked to the Case.
 
+<img width="1682" height="830" alt="image" src="https://github.com/user-attachments/assets/830bdee7-0071-494e-8117-d087f734926d" />
+
+
 Tiles 2–4 are clickable and open a `LightningModal` listing the related records with row-level navigation back to the source object.
 
 Built on SLDS 2 design tokens with 16 named color themes plus full per-color hex overrides.
