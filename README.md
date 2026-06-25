@@ -14,8 +14,6 @@ Tiles 2–4 are clickable and open a `LightningModal` listing the related record
 
 Built on SLDS 2 design tokens with 16 named color themes plus full per-color hex overrides.
 
-![Component layout — header above a 4-column tile grid](./docs/screenshots/layout.png)
-
 ---
 
 ## Table of Contents
