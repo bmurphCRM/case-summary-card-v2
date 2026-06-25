@@ -1,0 +1,35 @@
+<template>
+    <template lwc:if={clickable}>
+        <button
+            type="button"
+            class={tileClass}
+            onclick={handleClick}
+            title={label}
+        >
+            <div class="tile_row">
+                <lightning-icon
+                    icon-name={iconName}
+                    size="small"
+                    alternative-text={label}
+                    class="tile_icon"
+                ></lightning-icon>
+                <span class="tile_label">{label}</span>
+            </div>
+            <div class="tile_value">{value}</div>
+        </button>
+    </template>
+    <template lwc:else>
+        <div class={tileClass} title={label}>
+            <div class="tile_row">
+                <lightning-icon
+                    icon-name={iconName}
+                    size="small"
+                    alternative-text={label}
+                    class="tile_icon"
+                ></lightning-icon>
+                <span class="tile_label">{label}</span>
+            </div>
+            <div class="tile_value">{value}</div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,82 @@
+:host {
+    display: block;
+}
+
+.csc-card {
+    --sds-c-icon-color-foreground-default: var(--csc-tile-icon-color, #0176d3);
+
+    background: var(--csc-background-color, var(--slds-g-color-surface-container-1, #ffffff));
+    border: 1px solid var(--csc-outline-color, var(--slds-g-color-border-base-1, #e5e5e5));
+    border-radius: var(--slds-g-radius-border-3, 12px);
+    box-shadow: var(--slds-g-shadow-3, 0 4px 12px rgba(0, 0, 0, 0.08));
+    padding: var(--slds-g-spacing-4, 1rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.csc-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.csc-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.csc-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--csc-header-color, #0b2545);
+}
+
+.csc-header-icon {
+    --sds-c-icon-color-foreground-default: var(--csc-header-color, #0b2545);
+}
+
+.csc-subtitle {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--csc-tile-label-color, #54698d);
+}
+
+.csc-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.csc-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 80px;
+    padding: 1rem;
+    border-radius: var(--slds-g-radius-border-2, 8px);
+}
+
+.csc-state_loading {
+    position: relative;
+}
+
+.csc-state_error {
+    background: #fdf2f2;
+    color: #a40000;
+}
+
+@media (max-width: 768px) {
+    .csc-tiles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .csc-tiles {
+        grid-template-columns: 1fr;
+    }
+}

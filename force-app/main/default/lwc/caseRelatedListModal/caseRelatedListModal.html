@@ -1,0 +1,43 @@
+<template>
+    <lightning-modal-header label={label} class="modal_header" style={hostStyle}></lightning-modal-header>
+
+    <lightning-modal-body class="modal_body" style={hostStyle}>
+        <template lwc:if={isLoading}>
+            <div class="state state_loading">
+                <lightning-spinner size="small" alternative-text="Loading"></lightning-spinner>
+            </div>
+        </template>
+
+        <template lwc:elseif={errorMessage}>
+            <div class="state state_error" role="alert">
+                <lightning-icon icon-name="utility:error" size="small" variant="error"></lightning-icon>
+                <span>{errorMessage}</span>
+            </div>
+        </template>
+
+        <template lwc:elseif={isEmpty}>
+            <div class="state state_empty">
+                <lightning-icon icon-name="utility:info" size="small"></lightning-icon>
+                <span>{emptyMessage}</span>
+            </div>
+        </template>
+
+        <template lwc:else>
+            <template lwc:if={truncated}>
+                <div class="state state_banner">Showing first 200 records.</div>
+            </template>
+            <lightning-datatable
+                key-field="Id"
+                data={rows}
+                columns={columns}
+                hide-checkbox-column
+                resize-column-disabled
+                wrap-text-max-lines="2"
+            ></lightning-datatable>
+        </template>
+    </lightning-modal-body>
+
+    <lightning-modal-footer>
+        <lightning-button label="Close" onclick={handleClose}></lightning-button>
+    </lightning-modal-footer>
+</template>

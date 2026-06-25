@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Case Summary Card V2</masterLabel>
+    <description>Modern case summary card with themable tiles for age, open activities, notes, and files.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Case</object>
+            </objects>
+            <property name="title" type="String" label="Title" default="Case Summary" description="Header title shown above the tiles." />
+            <property name="subtitle" type="String" label="Subtitle" description="Optional subtitle shown below the title." />
+            <property name="colorTheme" type="String" label="Color Theme" default="Ocean Blue"
+                description="Choose a built-in palette. Per-color overrides below always win."
+                datasource="Ocean Blue,Forest Green,Sunset Orange,Royal Purple,Professional Slate,Crimson,Teal Modern,Goldenrod,Midnight,Carbon,Graphite,Rose Quartz,Mint Fresh,Indigo,Sandstone,Volt Cyber,Custom" />
+            <property name="titleHeaderColor" type="String" label="Title / Header Color (hex)" description="Hex like #0B5CAB. Overrides theme." />
+            <property name="backgroundColor" type="String" label="Card Background Color (hex)" description="Hex like #F4F8FC. Overrides theme." />
+            <property name="outlineColor" type="String" label="Card Outline Color (hex)" description="Hex like #D4E2F2. Overrides theme." />
+            <property name="tileBackgroundColor" type="String" label="Tile Background Color (hex)" />
+            <property name="tileBorderColor" type="String" label="Tile Border Color (hex)" />
+            <property name="tileIconColor" type="String" label="Tile Icon Color (hex)" />
+            <property name="tileLabelColor" type="String" label="Tile Label Color (hex)" />
+            <property name="tileValueColor" type="String" label="Tile Value Color (hex)" />
+            <property name="accentColor" type="String" label="Accent / Focus Color (hex)" />
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage">
+            <property name="recordId" type="String" label="Case Record Id" description="Bind a Case Id. Required outside the Case Record Page." />
+            <property name="title" type="String" label="Title" default="Case Summary" />
+            <property name="subtitle" type="String" label="Subtitle" />
+            <property name="colorTheme" type="String" label="Color Theme" default="Ocean Blue"
+                datasource="Ocean Blue,Forest Green,Sunset Orange,Royal Purple,Professional Slate,Crimson,Teal Modern,Goldenrod,Midnight,Carbon,Graphite,Rose Quartz,Mint Fresh,Indigo,Sandstone,Volt Cyber,Custom" />
+            <property name="titleHeaderColor" type="String" label="Title / Header Color (hex)" />
+            <property name="backgroundColor" type="String" label="Card Background Color (hex)" />
+            <property name="outlineColor" type="String" label="Card Outline Color (hex)" />
+            <property name="tileBackgroundColor" type="String" label="Tile Background Color (hex)" />
+            <property name="tileBorderColor" type="String" label="Tile Border Color (hex)" />
+            <property name="tileIconColor" type="String" label="Tile Icon Color (hex)" />
+            <property name="tileLabelColor" type="String" label="Tile Label Color (hex)" />
+            <property name="tileValueColor" type="String" label="Tile Value Color (hex)" />
+            <property name="accentColor" type="String" label="Accent / Focus Color (hex)" />
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" type="String" label="Case Record Id" default="{!recordId}" description="Bind a Case Id from URL or page state." />
+            <property name="title" type="String" label="Title" default="Case Summary" />
+            <property name="subtitle" type="String" label="Subtitle" />
+            <property name="colorTheme" type="String" label="Color Theme" default="Ocean Blue"
+                datasource="Ocean Blue,Forest Green,Sunset Orange,Royal Purple,Professional Slate,Crimson,Teal Modern,Goldenrod,Midnight,Carbon,Graphite,Rose Quartz,Mint Fresh,Indigo,Sandstone,Volt Cyber,Custom" />
+            <property name="titleHeaderColor" type="String" label="Title / Header Color (hex)" />
+            <property name="backgroundColor" type="String" label="Card Background Color (hex)" />
+            <property name="outlineColor" type="String" label="Card Outline Color (hex)" />
+            <property name="tileBackgroundColor" type="String" label="Tile Background Color (hex)" />
+            <property name="tileBorderColor" type="String" label="Tile Border Color (hex)" />
+            <property name="tileIconColor" type="String" label="Tile Icon Color (hex)" />
+            <property name="tileLabelColor" type="String" label="Tile Label Color (hex)" />
+            <property name="tileValueColor" type="String" label="Tile Value Color (hex)" />
+            <property name="accentColor" type="String" label="Accent / Focus Color (hex)" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,41 @@
+.modal_header {
+    --sds-c-modal-header-color-background: var(--csc-header-color, var(--slds-g-color-surface-container-1, #fff));
+    --sds-c-modal-header-text-color: var(--csc-accent-color, inherit);
+}
+
+.modal_body {
+    min-height: 200px;
+}
+
+.state {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: var(--slds-g-radius-border-2, 8px);
+}
+
+.state_loading {
+    justify-content: center;
+    min-height: 120px;
+    position: relative;
+}
+
+.state_empty {
+    color: var(--csc-tile-label-color, #54698d);
+    background: var(--csc-tile-background-color, #f4f6f9);
+}
+
+.state_error {
+    background: #fdf2f2;
+    color: #a40000;
+}
+
+.state_banner {
+    background: #fffbe6;
+    color: #6b5400;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--slds-g-radius-border-2, 8px);
+    font-size: 0.8125rem;
+}
